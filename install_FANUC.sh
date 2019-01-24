@@ -20,8 +20,8 @@ mysql -h127.0.0.1 -P3306 -uroot -e"UPDATE mysql.user SET password = PASSWORD('fa
 #second download the code and database
 echo second step:starting download the code and the database
 echo ===========================================================================
-git clone https://github.com/zishan11/fanucdocker_session.git
-cd fanucdocker_session
+#git clone https://github.com/zishan11/fanucdocker_session.git
+cd ~/fanucdocker_session
 apt-get -y install unzip
 unzip network_coding.zip
 
@@ -30,6 +30,7 @@ unzip network_coding.zip
 echo third step:install expect
 echo ===========================================================================
 apt-get -y install expect
+cd ~/fanucdocker_session
 chmod 700 config_mysql.sh
 ./config_mysql.sh
 
@@ -51,6 +52,6 @@ echo sixth step:run the code
 echo ===========================================================================
 screen -dmS FANUCPOT
 screen -r FANUCPOT
-cd network_coding
+cd ~/fanucdocker_session/network_coding
 python3 NC_TCPserver.py
 
