@@ -12,7 +12,7 @@ apt-get update
 #echo "mysql-server-5.6 mysql-server/root_password_again fanuc123 root" | debconf-set-selections
 #apt-get -y install mysql-server-5.6 mysql-client-5.6
 #maybe this way will not work, you can try this strategy
-DEBIAN_FRONTEND=noninteractive apt-get install -y mysql-server
+DEBIAN_FRONTEND=noninteractive apt-get install -y mysql-server-5.6
 service mysql start
 mysql -h127.0.0.1 -P3306 -uroot -e"UPDATE mysql.user SET password = PASSWORD('fanuc123') WHERE user = 'root'"
 
