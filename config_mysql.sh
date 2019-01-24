@@ -9,4 +9,3 @@ send "set names utf8"
 send "source ~/fanucdocker_session/fanucdocker_session.sql;\r\n"
 send "exit\r\n"
 expect eof
-interact
