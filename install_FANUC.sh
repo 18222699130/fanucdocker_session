@@ -50,8 +50,10 @@ mkdir /var/log/safetyLog
 #sixth, we run the code in a screen
 echo sixth step:run the code
 echo ===========================================================================
-screen -dmS FANUCPOT
-screen -r FANUCPOT
-cd ~/fanucdocker_session/network_coding
-python3 NC_TCPserver.py
+screen_name=$"FANUCPOT"
+screen -dmS $screen_name
+#screen -r FANUCPOT
+screen -x -S $screen_name -p 0 -X stuff "cd ~/fanucdocker_session/network_coding\n"
+screen -x -S $screen_name -p 0 -X stuff "python3 NC_TCPserver.py\n"
+#python3 NC_TCPserver.py
 
