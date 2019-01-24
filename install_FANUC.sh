@@ -28,10 +28,11 @@ unzip network_coding.zip
 
 #third is alone scipt
 chmod 700 config_mysql.sh
-./config_mysql.sh
 echo third step:install expect
 echo ===========================================================================
 apt-get -y install expect
+./config_mysql.sh
+
 
 #fourth, install the pip3 and other pypi packages
 echo fourth step:install pip3 and other pypi packages
