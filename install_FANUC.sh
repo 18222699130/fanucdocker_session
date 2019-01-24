@@ -1,5 +1,6 @@
 #!/bin/bash
 #first install mysql
+echo first step:install mysql
 echo begin to add the respository with old version mysql-5.6 href
 echo ===========================================================================
 apt-get -y install software-properties-common
